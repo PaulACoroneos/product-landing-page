@@ -15,9 +15,18 @@
   padding: 0.5rem;
   text-decoration: none;
   cursor: pointer;
+  color:black;
 }
 
 html {
   box-sizing: border-box;
   background-color: rgb(230, 210, 180);
+  font-family: 'Roboto Slab';
+}
+
+#sub-header {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 0.25rem;
 }
