@@ -7,7 +7,7 @@
 
 #nav-bar {
   display:flex;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 0.5rem;
 }
 
@@ -30,3 +30,61 @@ html {
   justify-content: space-between;
   column-gap: 0.25rem;
 }
+
+.package {
+  display:flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  justify-content: space-between;
+}
+
+.packages {
+  margin-top: 1rem;
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 1rem;
+}
+
+#container {
+  padding: 1rem;
+  max-width: 130ch;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .packages {
+    margin-top: 1rem;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #nav-bar {
+    display:flex;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+}
+
