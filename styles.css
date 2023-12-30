@@ -2,7 +2,68 @@
   display:flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: rgb(200, 180, 150);
+  border-radius: 0.5rem;
+}
+
+#footer {
+  display:flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgb(200, 180, 150);
+  border-radius: 0.5rem;
+  li {
+    padding: 0.5rem;
+    display:inline;
+    list-style-type: none;
+  }
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
 }
 
 #nav-bar {
@@ -19,7 +80,6 @@
 }
 
 html {
-  box-sizing: border-box;
   background-color: rgb(230, 210, 180);
   font-family: 'Roboto Slab';
 }
@@ -36,7 +96,7 @@ html {
   flex-direction: column;
   border: 1px solid black;
   border-radius: 1rem;
-  padding: 0 1rem;
+  padding: 1rem;
   justify-content: space-between;
 }
 
@@ -69,6 +129,14 @@ h1 {
   margin: 0 auto;
 }
 
+.cta {
+  display: inline-block;
+  background-color: rgb(200, 180, 150);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
 @media screen and (min-width: 768px) {
   .packages {
     margin-top: 1rem;
@@ -88,3 +156,24 @@ h1 {
   }
 }
 
+section {
+  padding: 1rem 0;
+}
+
+.copy-content {
+  padding: 1rem;
+}
+
+#email {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+#submit {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgb(200, 180, 150);
+  border: none;
+  cursor: pointer;
+}
