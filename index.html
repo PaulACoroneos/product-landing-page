@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,30 +11,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<header id="header">
-  <div id="sub-header">
-    <i class="fa-solid fa-music"></i>
-    <h1>Alexander's Ragtime Jazz Band</h1>
-  </div>
-  <nav id="nav-bar">
-    <a class="nav-link" href="#about">About</a>
-    <a class="nav-link" href="#music">Music</a>
-    <a class="nav-link" href="#contact">Contact</a>
-  </nav>
-</header>
 
 <body>
+  <header id="header">
+    <div id="sub-header">
+      <i class="fa-solid fa-music" aria-hidden="true"></i>
+      <h1>Alexander's Ragtime Jazz Band</h1>
+    </div>
+    <nav id="nav-bar" aria-label="Main navigation">
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#music">Music</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+  </header>
+
   <main id="container">
-    <h2>Playing all that jazz, today!</h2>
+    <div id="hero">
+      <h2>Playing all that jazz, today!</h2>
+    </div>
     <section id="about">
       <h3>About</h3>
-      <div>
+      <div class="about-content">
         <p class="copy-content">Alexander's Ragtime Band is a jazz band that specializes in playing old time jazz. We play at all sorts of
           events from weddings to parties to school events. We even play on the street! We are based in New York City
           but are willing to travel to play at your event. We have been playing together for over 20 years and have a
           combined experience of over 100 years. We are the best at what we do and we love to play music!</p>
-        <iframe id="video" width="420" height="315" src="https://www.youtube.com/embed/Ni6vV9heJhM">
-        </iframe>
+        <div class="video-wrapper">
+          <iframe id="video" src="https://www.youtube.com/embed/Ni6vV9heJhM" title="Alexander's Ragtime Band performance" allowfullscreen>
+          </iframe>
+        </div>
       </div>
     </section>
     <section id="music">
@@ -46,19 +52,19 @@
           <h4>In and out</h4>
           <p class="copy-content">Our most popular package! We'll play a few songs at your event and then leave. Perfect for a quick party.
           </p>
-          <p class="cta">Click to book <i>starting from $500</i></p>
+          <a href="#contact" class="cta">Click to book <i>starting from $500</i></a>
         </div>
         <div class="package">
           <h4>Sing! Sing! Sing!</h4>
           <p class="copy-content">Need us for a full day? We'll make sure the party keep on moving! As they say in the biz, "One more time".
           </p>
-          <p class="cta">Click to book <i>starting from $2000</i></p>
+          <a href="#contact" class="cta">Click to book <i>starting from $2000</i></a>
         </div>
         <div class="package">
           <h4>Count Basie</h4>
           <p class="copy-content">Want us to come to a school? We will come and even let some kids try out an instrument. The best time for
             children to learn music is in their formative years.</p>
-          <p class="cta">Click to book <i>starting from $250</i></p>
+          <a href="#contact" class="cta">Click to book <i>starting from $250</i></a>
         </div>
       </div>
     </section>
@@ -66,6 +72,7 @@
       <h3>Contact</h3>
       <p class="copy-content">Interested in hiring us and hearing our music live? Contact us today!</p>
       <form action="https://www.freecodecamp.com/email-submit" id="form">
+        <label for="email" class="visually-hidden">Email address</label>
         <input id="email" name="email" type="email" placeholder="Your email address" />
         <input id="submit" type="submit" value="Contact us!" />
       </form>
@@ -73,9 +80,9 @@
   </main>
   <footer id="footer">
     <ul>
-      <li>Privacy</li>
-      <li>Terms</li>
-      <li>Contact</li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
     <p>Copyright 2023 Alexander's Ragtime Band</p>
   </footer>
